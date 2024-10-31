@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finola Loan Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Finola Finance</div>
+        <nav>
+            <a href="#about-us">About Us</a>
+            <a href="#loan-calculator">Calculator</a>
+            <a href="#contact">Contact</a>
+            
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-section">
+        <h2>About Us</h2>
+        <p>The customer is very important; the customer will be followed by the customer. Now calculate your EMI easily.</p>
+        <button onclick="scrollToCalculator()">Get Started</button>
+    </section>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="loan-calculator" class="calculator-section">
+            <div class="card">
+                <h1>Loan Calculator</h1>
+                <form id="loanForm">
+                    <label for="loanType">Select Loan Type:</label>
+                    <select id="loanType" required>
+                        <option value="home">Home Loan</option>
+                        <option value="personal">Personal Loan</option>
+                        <option value="car">Car Loan</option>
+                    </select>
+
+                    <label for="amount">Loan Amount (in Lakhs): <span id="amountDisplay">0</span>L</label>
+                    <input type="range" id="amount" min="0" max="20" step="0.1" value="0" oninput="updateAmountDisplay()">
+
+                    <label for="rate">Interest Rate (Annual %): <span id="rateDisplay">0</span>%</label>
+                    <input type="range" id="rate" min="0" max="20" step="0.1" value="0" oninput="updateRateDisplay()">
+
+                    <label for="years">Loan Term (Years): <span id="yearsDisplay">0</span></label>
+                    <input type="range" id="years" min="0" max="20" step="1" value="0" oninput="updateYearsDisplay()">
+
+                    <button type="button" onclick="calculateLoan()">Calculate</button>
+                </form>
+
+                <!-- Result Display -->
+                <div id="result" class="result-section">
+                    <h2>Monthly Payment: <span id="monthlyPayment">0</span></h2>
+                    <h3>Breakdown of Total Payment</h3>
+                    <p>Total Loan Amount: <span id="totalPrincipal">0</span></p>
+                    <p>Total Interest Payable: <span id="totalInterest">0</span></p>
+                    <p>Total Payment (Principal + Interest): <span id="totalPayment">0</span></p>
+                    
+                    <!-- Loan Graph -->
+                    <canvas id="loanChart" width="400" height="400"></canvas>
+                </div>
+
+                <!-- Apply Now Button -->
+                <!-- Apply Now Button -->
+                 <button id="apply-now-btn" onclick="applyForLoan('Thanks for applying')" class="apply-btn">Apply Now</button>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Finola Finance. All Rights Reserved.</p>
+        <nav>
+            <a href="#privacy">Privacy Policy</a> | 
+            <a href="#terms">Terms of Service</a> | 
+            <a href="#contact">Contact Support</a>
+        </nav>
+    </footer>
+
+    <script src="script4.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2E1A47; /* Dark Purple background */
+    color: #EAE6FF; /* Light text color for contrast */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background-color: #3A2A65; /* A lighter purple for the header */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none; 
+    font-size: 1em;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* About Us Section */
+.about-section {
+    background-image: url(finance.png);
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #4A3D6D; /* Darker section background */
+}
+
+.about-section h2 {
+    color: #EAE6FF; /* Light text color */
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.about-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #5D4A88; /* A complementary shade for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.about-section button:hover {
+    background-color: #7A5C9A; /* Lighter shade on hover */
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #3A2A65; /* Same as header */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 0.9em;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Calculator Section */
+.calculator-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.card {
+    background-color: #4A3D6D; /* Card background color */
+    max-width: 500px; /* Increased width for a spacious card */
+    padding: 30px; /* Added padding for better spacing */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    text-align: center;
+    transition: box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); /* Hover effect for card */
+}
+
+/* Input Styles */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #EAE6FF; /* Light text color for labels */
+}
+
+input[type="range"] {
+    width: 100%; /* Full width for better interaction */
+    margin-top: 5px;
+    accent-color: #5D4A88; /* Color of the range input */
+}
+
+.result-section {
+    margin-top: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card,
+    .about-section {
+        padding: 20px;
+        width: 90%;
+    }
+}
+/* Common Button Styles */
+button {
+    padding: 12px 25px; /* Increased padding for more visibility */
+    font-size: 1em;
+    background-color: #5D4A88; /* Color for buttons */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    margin: 15px 0; /* Space between buttons */
+}
+
+button:hover {
+    background-color: #7A5C9A; /* Lighter shade on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+/* Specific Styles for "Apply Now" and "Calculate" Buttons */
+.apply-btn,
+#calculate-button { /* Ensure to set an id or class for Calculate button */
+    background-color: #5D4A88; /* Same as other buttons */
+    width: 100%; /* Make button full width for visibility */
+}
+
+/* Optional: For responsiveness, make sure buttons adapt */
+@media (max-width: 768px) {
+    button {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
